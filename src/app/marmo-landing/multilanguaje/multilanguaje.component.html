@@ -19,15 +19,17 @@
                     </div>
                     <div class="codeBox">
                         <div *ngIf = "isJava" class="imgCont">
-                            <pre><code [highlight]="encoded"></code></pre>
+                            <pre class="code"><code [highlight]="java"></code></pre>
                             <!-- <img src="../../assets/img/code.png" alt=""> -->
 
                         </div>
                         <div *ngIf = "isJavascript" class="imgCont">
-                            <img src="../../assets/img/logo-rcn.png" alt="">
+                                <pre class="code"><code [highlight]="javascript"></code></pre>
+                            <!-- <img src="../../assets/img/logo-rcn.png" alt=""> -->
                         </div>
                         <div *ngIf = "isPython" class="imgCont">
-                             <img src="../../assets/img/marmo-imago.svg" alt="">
+                                <pre class="code"><code [highlight]="python"></code></pre>
+                             <!-- <img src="../../assets/img/marmo-imago.svg" alt=""> -->
                         </div>
                     </div>
                 </div>  

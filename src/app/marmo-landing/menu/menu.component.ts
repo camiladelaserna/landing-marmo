@@ -13,8 +13,6 @@ export class MenuComponent implements OnInit {
   libraries:boolean = false;
   mobile:boolean = false;
   menu:boolean = false;
-  url = window.location.href
-  id = this.url.split('#')
   
   sectionFeat(){
     this.features = true;
@@ -26,12 +24,7 @@ export class MenuComponent implements OnInit {
     this.libraries = true;
   }
 
-  nonFocus(){
-    this.features = false;
-    this.libraries = false;
-  }
-
-  mobileMenu(){
+   mobileMenu(){
     this.mobile = !this.mobile;
   }
 
@@ -39,9 +32,12 @@ export class MenuComponent implements OnInit {
     this.menu= !this.menu;
   }
 
-  ngOnInit() {
-    console.log(this.id[1]);
+  clearSec(){
+    this.libraries = false;
+    this.features = false;
+  }
 
+  ngOnInit() {
   }
 }
 

@@ -15,13 +15,28 @@ section {
 .mainBox {
     display: flex;
     justify-content: center;
-}
-
-.footerBox {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5% 0;
+    .footerBox {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5% 0;
+        .copy {
+            height: auto;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            .box {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: auto;
+            }
+            p {
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 .imgBox {
@@ -34,40 +49,25 @@ section {
     }
 }
 
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: auto;
-}
-
-.copy {
-    height: auto;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    p {
-        margin: 0;
-        font-size: 14px;
-    }
-}
-
 @media (min-width: 1200px) {
 
     .mainBox {
         display: flex;
         justify-content: center;
-    }
-
-    .footerBox {
-        width: 35%;
-        margin: 2% 0;
-    }
-
-    .box {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        .footerBox {
+            width: 35%;
+            margin: 2% 0;
+            .copy {
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                .box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+            }
+        }
     }
 
     .imgBox {
@@ -77,12 +77,6 @@ section {
         img {
              width: 100%;
         }
-    }
-
-    .copy {
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
     }
 
 }

@@ -14,10 +14,14 @@ import { AdvantagesComponent } from './marmo-landing/advantages/advantages.compo
 import { MarmoLandingComponent } from './marmo-landing/marmo-landing.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import javascript from 'highlight.js/lib/languages/javascript';
+import java from 'highlight.js/lib/languages/java';
+import python from 'highlight.js/lib/languages/python';
 
 export function hljsLanguages() {
   return [
     {name: 'typescript', func: javascript},
+    {name: 'java', func: java},
+    {name: 'python', func: python},
   ];
 }
 

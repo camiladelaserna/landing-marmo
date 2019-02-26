@@ -16,14 +16,33 @@ $yellowColor: #F7C34D;
     justify-content: space-between;
     background-color: white;
     box-shadow: 0px 1px 5px #bcbcbc;
+    .imgDiv {
+        width: 90px;
+        margin-left: 5%;
+        img {
+             width: 100%;
+        }
+    }
 }
 
-.imgDiv {
-    width: 90px;
-    margin-left: 5%;
-    img {
-         width: 100%;
+.bars {
+    margin-right: 5%;
+    font-size: 30px;
+    color: $grayColor3;
+    display: block;
+    .fa-bars {
+        display: block;
     }
+    .no-fa-bars {
+        display: none;
+    }
+    .fa-times {
+        display: block;
+    }
+    .no-fa-times {
+        display: none;
+    }
+
 }
 
 .container{
@@ -40,25 +59,45 @@ $yellowColor: #F7C34D;
     width: 100%;
 }
 
-.back {
-    display: block;
-    position: absolute;
-    z-index: 0;
-    top: 100%;
-    height: 1000px;
-    width: 100%;
-    background-color: #4e4e4e;
-    opacity: 0.5;
-}
-
-.noBack {
-    display: none;
-}
-
 .nav {
     display: block;
     width: auto;
     width: 100%;
+    .secBox {
+        margin: 0;
+        width: auto;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        .sec {
+            display: flex;
+            justify-content: flex-start;
+            width: auto;
+            padding: 8% 0 8% 10%;
+            border-top: solid 1px $grayColor;
+        }
+    }
+}
+
+.dotBox {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50px;
+        background-color: $yellowColor;
+    }
+    .noDot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50px;
+        background-color: white;
+    }
+
 }
 
 .noNav {
@@ -74,7 +113,6 @@ button {
 	outline: inherit;
 }
 
-
 a {
     text-decoration: none;
     color: black;
@@ -87,90 +125,41 @@ a:hover {
     color: $grayColor2;
   }
 
-.secBox {
-    margin: 0;
-    width: auto;
-    background-color: white;
-    display: flex;
-    align-items: center;
-}
-
-.sec {
-    display: flex;
-    justify-content: flex-start;
-    padding: 8% 0 8% 10%;
-    border-top: solid 1px $grayColor;
-}
-
-.dotBox {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin-left: 2%;
-}
-
-.dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50px;
-    background-color: $yellowColor;
-}
-
-.noDot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50px;
-    background-color: white;
-}
-
-.bars {
-    margin-right: 5%;
-    font-size: 30px;
-    color: $grayColor3;
+.back {
     display: block;
+    position: absolute;
+    z-index: 0;
+    top: 100%;
+    height: 1000px;
+    width: 100%;
+    background-color: #4e4e4e;
+    opacity: 0.5;
 }
 
-.fa-bars {
-    display: block;
-}
-
-.no-fa-bars {
-    display: none;
-}
-
-.fa-times {
-    display: block;
-}
-
-.no-fa-times {
+.noBack {
     display: none;
 }
 
 @media (min-width: 1200px) {
     
-    .container {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .imgDiv {
-        width: 110px;
-    }
-
     .navbar {
         height: 7vh;
+        .imgDiv {
+            width: 110px;
+        }
     }
 
     .bars {
         display: none;
     }
-
-    .container{
+     
+    .container {
+        display: flex;
+        justify-content: flex-end;
         margin: 0 5% 0 0;
         width: 80%;
     }
-    
+   
     .mobile {
         display: block;
     }
@@ -181,16 +170,37 @@ a:hover {
         align-items: center;
         width: auto;
         width: 35%;
+        .secBox {
+            margin: 0 2%;
+            width: auto;
+            display: block;
+            .sec {
+                border-top: none;
+                justify-content: center;
+            }
+        }
     }
-    
-    // button {
-    //     background: none;
-    //     color: inherit;
-    //     border: none;
-    //     padding: 0;
-    //     font: inherit;
-    //     outline: inherit;
-    // }
+
+    .dotBox {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+        margin-left: 0;
+        .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50px;
+            background-color: $yellowColor;
+        }
+        .noDot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50px;
+            background-color: white;
+        }
+    }
     
     
     a {
@@ -199,48 +209,6 @@ a:hover {
         font-weight: bolder;
         letter-spacing: 2px;
         font-size: 14px;
-    
-    }
-    
-    .secBox {
-        margin: 0 2%;
-        width: auto;
-        display: block;
-    }
-    
-    .dotBox {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        margin-top: 2%;
-        margin-left: 0;
-    }
-    
-    .dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50px;
-        background-color: $yellowColor;
-    }
-    
-    .noDot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50px;
-        background-color: white;
-    }
-    
-    // .bars {
-    //     margin-right: 5%;
-    //     font-size: 30px;
-    //     color: $grayColor3;
-    //     display: block;
-    // }
-    
-    .sec {
-        border-top: none;
     }
 
-
-  }
+}

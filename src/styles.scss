@@ -1,15 +1,8 @@
-@import '~highlight.js/styles/darkula.css';
+@import '~highlight.js/styles/atelier-sulphurpool-dark.css';
 
 html {
     scroll-behavior: smooth;
 }
-
-.hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    background: #4e4e4e;
-  }
 
 body {
     margin: 0;
